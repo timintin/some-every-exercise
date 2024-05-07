@@ -1,0 +1,11 @@
+function hasNoDuplicates(arr) {
+    let elements = new Set();
+    for (let i = 0; i < arr.length; i++) {
+        elements.add(arr[i]);
+    }
+    return elements.size === arr.length; // If sizes match, there are no duplicates
+}
+
+// Test cases
+console.log(hasNoDuplicates([1, 2, 3, 1])); // false
+console.log(hasNoDuplicates([1, 2, 3]));    // true
