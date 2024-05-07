@@ -1,0 +1,19 @@
+function hasCertainValue(arr, key, value) {
+    for (let obj of arr) {
+        if (obj[key] !== value) {
+            return false; // Return false as soon as an object does not match the key-value pair
+        }
+    }
+    return true; // Return true if every object matches the key-value pair
+}
+
+// Test cases
+let arr = [
+    {title: "Instructor", first: 'Elie', last: "Schoppik"},
+    {title: "Instructor", first: 'Tim', last: "Garcia", isCatOwner: true},
+    {title: "Instructor", first: 'Matt', last: "Lane"},
+    {title: "Instructor", first: 'Colt', last: "Steele", isCatOwner: true}
+];
+
+console.log(hasCertainValue(arr, 'title', 'Instructor')); // true
+console.log(hasCertainValue(arr, 'first', 'Elie')); // false
